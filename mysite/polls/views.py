@@ -1,7 +1,17 @@
 from django.shortcuts import render
 
-# Kind of intersting how useful Python is in this way. I heard instagram, bitbucket, and many other database sites use Django
 from django.http import HttpResponse
+
+from .models import Question
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+
+from django.urls import reverse
+
+from .models import Choice, Question
+
+# Kind of intersting how useful Python is in this way. I heard instagram, bitbucket, and many other database sites use Django
+
 
 
 def index(request):
@@ -19,7 +29,7 @@ def vote(request, question_id):
 
 
 
-from .models import Question
+
 
 
 def index(request):
@@ -73,12 +83,6 @@ def detail(request, question_id):
 
 
 
-
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
-
-from .models import Choice, Question
 # ...
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -103,7 +107,7 @@ def vote(request, question_id):
     
     
     
-    from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render
 
 
 def results(request, question_id):
@@ -111,7 +115,7 @@ def results(request, question_id):
     return render(request, 'polls/results.html', {'question': question})
 
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+
 from django.urls import reverse
 from django.views import generic
 
