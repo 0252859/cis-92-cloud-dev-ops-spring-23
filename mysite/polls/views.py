@@ -10,7 +10,7 @@ from django.urls import reverse
 
 from .models import Choice, Question
 
-# Kind of intersting how useful Python is in this way. I heard instagram, bitbucket, and many other database sites use Django
+# Kind of interesting how useful Python is in this way. I heard instagram, bitbucket, and many other database sites use Django
 
 
 
