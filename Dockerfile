@@ -4,6 +4,5 @@ RUN pip install django
 RUN pip install psycopg2-binary
 COPY mysite /mysite 
 WORKDIR /mysite 
-ENV PORT=8080
 CMD python3 ./manage.py runserver 0.0.0.0:$PORT 
 
