@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+        
     },
 ]
 
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mysite',
-        'USER': 'postgres',
-        'PASSWORD': 'django',
-        'HOST': 'localhost',
+        'NAME': os.environ['NAME'],
+        'USER': os.environ['USER']
+        'PASSWORD': os.environ['PASSWORD']
+        'HOST': os.environ['HOST']
     },
 }
 
