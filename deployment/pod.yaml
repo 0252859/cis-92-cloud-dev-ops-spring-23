@@ -8,24 +8,8 @@ spec:
   containers:
   - name: httpd
     image:  ghcr.io/0252859/cis-92-cloud-dev-ops-spring-23:milestone-4.11
-    env:
-    - name: USER
-      valueFrom:
-       secretKeyRef:
-         name: db-creds
-         key: user
-    - name: PASSWORD
-      valueFrom:
-       secretKeyRef:
-         name: db-creds
-         key: password   
-    - name: HOST
-      valueFrom:
-       secretKeyRef:
-         name: db-creds
-         key: host
-   command: ["/bin/sh"]
-   args: ["-c","mysql -u $USER -p$PASSWORD -h $HOST"]
-    
+    key: SECRET_KEY
+    value: superspecialkey
+  
   ports:
     - containerPort: 80
