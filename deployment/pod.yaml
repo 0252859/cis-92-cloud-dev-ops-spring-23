@@ -8,8 +8,9 @@ spec:
   containers:
   - name: httpd
     image:  ghcr.io/0252859/cis-92-cloud-dev-ops-spring-23:milestone-4.11
-    key: SECRET_KEY
-    value: superspecialkey
+    env:
+    - name: SECRET_KEY
+      value: blahblahblah
   
-  ports:
+    ports:
     - containerPort: 80
