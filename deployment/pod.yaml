@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: virgin-pod
+  name: lizzyspod
   labels:
     function: webserver
 spec:
@@ -11,6 +11,6 @@ spec:
     env:
     - name: SECRET_KEY
       value: blahblahblah
-  
+
     ports:
-    - containerPort: 80
+    - containerPort: 80 
