@@ -11,9 +11,9 @@ spec:
     env:
     - name: SECRET_KEY
       value: blahblahblah
-
-    ports:
-    - containerPort: 80 
+    - name: PORT
+      value: '80'
+     
 
     resources: 
       limits: 
