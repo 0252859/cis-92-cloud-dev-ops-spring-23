@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image:  ghcr.io/0252859/cis-92-cloud-dev-ops-spring-23:milestone-4.11
+    image:  ghcr.io/0252859/cis-92-cloud-dev-ops-spring-23:milestone-5.1
     env:
     - name: SECRET_KEY
       value: blahblahblah
